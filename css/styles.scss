@@ -178,6 +178,70 @@ a {
         }
     }
 
+    & > .projects-content {
+        overflow: auto;
+        grid-row: 3 / 18;
+        grid-column: 1 / 19;
+        background-color: var(--mainColor);
+        color: yellow;
+
+        & > .projects {
+            border-bottom: 1px solid var(--textColor);
+            border-radius: 4px;
+            padding: 12px 28px 18px 28px;
+
+            & > div:nth-child(1) {
+                color: var(--textColor); 
+                text-align: center;
+                font-weight: 600;
+                font-size: x-large;
+            }
+
+            & > div:nth-child(2) > img {
+                display: block;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                cursor: pointer;
+            }
+
+            & > .multi-content { 
+                display: flex;
+
+                & > .mobile { 
+                    width: 15%;
+                }
+
+                & > .web { 
+                    width: 40%;
+                }
+
+            }
+
+            & > div:nth-child(3) > p {
+                color: var(--textColor);
+                font-size: medium;
+                text-align: center;
+            }
+
+            & > div:nth-child(4) {
+                margin-top: 8px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                font-size: 18px;
+                font-weight: 500;
+                
+                & > a > img { 
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+    }
+
     & > .footer {
         background: var(--navColor);
         color: var(--textColor);
@@ -195,8 +259,6 @@ a {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .main-container {
-        white-space: nowrap;
-        overflow: hidden;
 
         & > .nav-header {
             grid-column: 1 / 15;
